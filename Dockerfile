@@ -1,4 +1,5 @@
 FROM python
 RUN pip install Flask jsonify
-ADD app.py
+RUN git clone https://github.com/rohishree/microservices.git
+WORKDIR microservices
 CMD ["python","./app.py"]
